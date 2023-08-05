@@ -16,11 +16,50 @@
     text-align: center;
   }
 
-    @media screen and (max-width: 600px) {
-  #material {
-    width: 100%; /* Make the dropdown box take the full width of its container on small screens */
-  }
+.input-field input {
+  width: 100%;
+  padding: 10px;
 }
+
+.input-field > input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.leasehold-section > div {
+  flex: 1;
+}
+
+    
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0; /* Space before and after the gallery */
+}
+
+.gallery-item {
+  flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+  overflow: hidden; /* Ensures the content does not spill out of the box */
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%; /* Cap the height to the parent's height */
+  object-fit: cover; /* Ensures the images cover the full space */
+  flex-basis: calc(50% - 10px); /* 2 photos per row, 10px gap */
+  padding-bottom: 30%; /* 3:2 aspect ratio */
+  transition: width 0.5s; /* Transition for smooth width change */
+  background-color: #ccc; /* Background color for placeholder */
+  margin: 10px; /* Some space around the images */
+  position: relative; /* To enable absolute positioning for the img tag */
+}
+
+.flex-row > .gallery-item {
+  flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+}
+
 
 footer {
   background-color: #22331D; /* or any color you prefer */
@@ -121,7 +160,7 @@ footer {
   padding: 0; /* no padding */
 }
 
-
+    
     h1 {
       font-family: 'Noto Serif', serif;
       color: #22331D;
@@ -129,7 +168,7 @@ footer {
       padding-top: 20px;
       font-size: 40px;
     }
-
+    
     h2,
 .group h2 {
   font-family: 'Noto Serif', serif;
@@ -181,12 +220,12 @@ footer {
   margin: 0 auto; /* Centers the container */
 }
 
-
+    
     /* Hide the original checkbox */
     input[type="checkbox"] {
       display: none;
     }
-
+  
 
     /* Style the label as a button */
     .custom-checkbox {
@@ -208,10 +247,10 @@ footer {
 
     table {
       width: 100%;
+      border-collapse: separate; /* This allows border-spacing to work */
+  border-spacing: 0 5px; /* 0 horizontal spacing, 5px vertical spacing */
       border-collapse: collapse;
       margin-top: 20px;
-      border: 1px solid #F5F5F6;
-      /* light gray */
       border-radius: 50px;
       text-align: center; /* Center the text */
     }
@@ -231,9 +270,12 @@ footer {
       border-radius: 50px;
     }
 
+    .highlighted-row {
+  background-color: #6A7369;
+}
+
     td {
-      border: 1px solid #F5F5F6;
-      /* light gray */
+      border: 1px solid transparent;
       padding: 8px;
       text-align: left;
       color: #000;
@@ -258,15 +300,25 @@ footer {
     }
 
 .flex-row {
-  display: flex
+  display: flex;
   align-items: stretch; /* Vertically center the items */
   flex-wrap: wrap; /* allows flex items to wrap onto multiple lines */
   justify-content: space-between;
   gap: 20px;
 }
 
+.flex-row > div {
+  flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+}
+
+    @media screen and (max-width: 600px) {
+  #material {
+    width: 100%; /* Make the dropdown box take the full width of its container on small screens */
+  }
+}
 
 
+    
 button[type="submit"] {
   flex-grow: 1; /* Make the button take up the remaining space */
   display: flex;
@@ -283,7 +335,11 @@ button[type="submit"] {
   padding: 0px; /* equal padding on all sides */
 }
 
-
+.flex-row > .box {
+  flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+  background-color: #ccc; /* Some placeholder styling */
+  padding: 20px; /* Some placeholder styling */
+}
 
     .group {
       background-color: #fff;
@@ -315,14 +371,35 @@ button[type="submit"] {
   <h1>Build Your Own Villa 🛖 </h1>
   <label class="label-class" for="input-id">Bali villa construction cost calculator</label>
   <form onsubmit="calculateCost(event)">
-
+    
+    
 <div class="container">
+
+  
+<!--test - gallery for midjourney-
+
+  <div class = "group" id="gallery">
+          <h2>Imagine your dream villa</h2>
+<div class="input-field">
+    <input type="text" placeholder="Enter text here...">
+  </div>
+    <div class="gallery">
+      <div class="flex-row">
+      <div class="gallery-item">
+  <img src="https://images.unsplash.com/photo-1631582053308-40f482e7ace5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" onclick="expand(this)" class="gallery-img"> </div>
+      <div class="gallery-item">  <img src="https://images.unsplash.com/photo-1631582053308-40f482e7ace5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" onclick="expand(this)" class="gallery-img"></div>
+      </div>
+      <div class="flex-row">
+ <div class="gallery-item"> <img src="https://images.unsplash.com/photo-1631582053308-40f482e7ace5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" onclick="expand(this)" class="gallery-img"> </div>
+ <div class="gallery-item"> <img src="https://images.unsplash.com/photo-1631582053308-40f482e7ace5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" onclick="expand(this)" class="gallery-img"> </div>
+</div>
+    </div>
+  </div> -->
+  
     <div class="group" id="group1">
       <h2>Size</h2>
-      <div class="flex-row">
         <label  class="label-small" for="area">Total living area (sqm)</label>
         <input type="number" id="area" required value="100">
-      </div>
     </div>
 
     <div class="group" id="group2">
@@ -342,7 +419,9 @@ button[type="submit"] {
       <h2>Land Details</h2>
       <div class="flex-row">
         <div>
-          <label  class="label-small" for="region">Select region:</label>
+          <label  class="label-small" for="region">
+            Select region:
+          </label>
           <select id="region">
             <option value="canggu">Canggu</option>
             <option value="pererenan">Pererenan</option>
@@ -352,7 +431,7 @@ button[type="submit"] {
             <option value="kerobokan">Kerobokan</option>
             <option value="umalas">Umalas</option>
             <option value="medewi">Medewi</option>
-          </select>
+                      </select>
         </div>
         <div>
           <label  class="label-small" for="landOwnership">Select land ownership:</label>
@@ -361,13 +440,14 @@ button[type="submit"] {
             <option value="leasehold" selected>Leasehold</option>
           </select>
         </div>
-
+      </div>
         <!-- Add the "Enter land price (in IDR)" input field -->
-        <div id="landPriceInputDiv" style="display: none;">
+      <div class="flex-row">  
+      <div id="landPriceInputDiv" style="display: none;">
           <label  class="label-small" for="landPrice">Enter land price (in IDR):</label>
           <input type="number" id="landPrice" required value="12000000">
         </div>
-
+        
         <div class="leasehold-section" style="display: block;">
           <label  class="label-small" for="landPrice">Enter land price per year (in IDR):</label>
           <input type="number" id="landPrice" required value="12000000">
@@ -382,20 +462,15 @@ button[type="submit"] {
 
     <div class="group" id="group4">
       <h2>You'd also need.. </h2>
-      <div class="flex-row">
-
-
-        <label for="architectureDesign">
-          <input type="checkbox" id="architectureDesign">
+        <label for="architectureDesignCheckbox">
+          <input type="checkbox" id="architectureDesignCheckbox">
           <span class="custom-checkbox">Architecture Design</span>
         </label>
         <div class="checkbox-row">
           <label><input type="checkbox" id="architectureDesignCheckbox" value="true"></label>
         </div>
-
-
-        <label for="interiorDesign">
-          <input type="checkbox" id="interiorDesign">
+        <label for="interiorDesignCheckbox">
+          <input type="checkbox" id="interiorDesignCheckbox">
           <span class="custom-checkbox">Interior Design </span>
         </label>
         <div class="checkbox-row">
@@ -403,33 +478,32 @@ button[type="submit"] {
         </div>
 
 
-        <label for="projectManagement">
-          <input type="checkbox" id="projectManagement">
+        <label for="projectManagementCheckbox">
+          <input type="checkbox" id="projectManagementCheckbox">
           <span class="custom-checkbox"> Project Management </span>
         </label>
         <div class="checkbox-row">
           <label><input type="checkbox" id="projectManagementCheckbox" value="true"></label>
         </div>
 
-        <label for="furnishing">
-          <input type="checkbox" id="furnishing">
+        <label for="furnishingCheckbox">
+          <input type="checkbox" id="furnishingCheckbox">
           <span class="custom-checkbox"> Furnishing </span>
         </label>
         <div class="checkbox-row">
           <label><input type="checkbox" id="furnishingCheckbox" value="true"></label>
-        </div>
       </div>
     </div>
 
-
-    <div class="group" id="button">
+  
+    <div class="group" id="button">      
       <div>
           <label for="calculateButton"></label>
           <button id="calculateButton" onclick="calculateCost(event)">Calculate</button>
       </div>
     </div>
 
-
+  
     <div class="group" id="table">
   </form>
   <div id="currencyDiv" style="display: none;">
@@ -445,8 +519,29 @@ button[type="submit"] {
   <div id="resultCost"></div>
   </div>
 </div>
-
+    
   <script>
+
+function expand(img) {
+  var galleryItems = document.getElementsByClassName('gallery-item');
+  if (img.parentNode.style.flexBasis === '100%') {
+    // The image is currently expanded and should be collapsed
+    for (var i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].style.flexBasis = 'calc(50% - 10px)';
+    }
+  } else {
+    // The image is not expanded and should be expanded
+    for (var i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].style.flexBasis = '0';
+    }
+    img.parentNode.style.flexBasis = '100%';
+  }
+}
+
+
+
+
+    
     function toggleLeaseholdSection() {
       const landOwnership = document.getElementById('landOwnership').value;
       const leaseholdSection = document.querySelector('.leasehold-section');
@@ -608,7 +703,7 @@ button[type="submit"] {
       // Prepare the summary table
       const summaryTable = `
         <table>
-            <tr>
+            <tr class="highlighted-row">
                 <th>Summary</th>
                 <th>Amount</th>
             </tr>
@@ -634,7 +729,7 @@ button[type="submit"] {
       // Prepare the breakdown of cost structures
       const costTable = `
                 <table>
-                    <tr>
+                    <tr class="highlighted-row">
                         <th>Cost Breakdown</th>
                         <th>Amount</th>
                     </tr>
