@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
+
+  <title>Bali Villa Construction Cost Calculator</title>
+  <style>
+  body {
+    font-family: 'Noto Serif', serif;
+    margin: 20px;
+    background-color: #F0EDE6;
+    text-align: center;
+  }
+
+footer {
+  background-color: #22331D; /* or any color you prefer */
+  color: white; /* or any color you prefer */
+  text-align: center;
+  font-family:'EB Garamond', serif;
+  padding: 20px;
+}
+
+    label[for="area"] {
+      font-size: 18px;
+      /* Adjust as needed */
+    }
+
+    input[id="area"] {
+      font-size: 18px;
+      /* Adjust as needed */
+      padding: 10px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+
+
+    input,
+    select {
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      background-color: #F5F5F6;
+      /* input field background color */
+      border: 1px solid #F5F5F6;
+      /* light gray */
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    button {
+      padding: 15px 32px;
+      /* Larger padding increases the button size */
+      font-size: 16px;
+      /* You can adjust this as needed */
+      background-color: #F27523;
+      /* button background color */
+      color: #fff;
+      /* white font color */
+      border: none;
+      /* remove border */
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    button:hover {
+      background-color: #5B7055;
+      /* changed hover color */
+    }
+
+    input:focus,
+    select:focus {
+      outline-color: #F27523;
+      /* outline color when focused */
+    }
+
+    a {
+  color: #00FF00; /* Bright green */
+}
+
+
+#calculateButton {
+  width: 100%; /* Fill the entire width of the group */
+  height: 60px; /* Set a suitable height */
+  background-color: #F27523; /* Button color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 20px;
+  font-size: 20px; /* Set a suitable font size */
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: background-color 0.3s ease; /* transition for a smooth color change */
+}
+
+#calculateButton:hover {
+  background-color: #5B7055;
+}
+
+
+#button {
+  background-color: transparent; /* transparent background */
+  border: none; /* no border */
+  padding: 0; /* no padding */
+}
+
+
+    h1 {
+      font-family: 'Noto Serif', serif;
+      color: #22331D;
+      margin-top: 60px;
+      padding-top: 20px;
+      font-size: 40px;
+    }
+
+    h2,
+.group h2 {
+  font-family: 'Noto Serif', serif;
+  text-align: center;
+  font-size: 26px;
+  color: #F27523;
+  margin: 10px; /* remove top margin */
+  padding: 5px; /* add some padding if necessary */
+}
+
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      text-align: center;
+    }
+
+    .label-class {
+  padding-bottom: 60px; /* Add padding under the label */
+}
+
+    .label-small {
+      padding-bottom: 10px;
+    }
+
+    body {
+      font-family: 'Oswald', sans-serif;
+      margin: 20px;
+      background-color: #F0EDE6;
+      /* website background color */
+      text-align: center;
+      /* Align text to the center */
+    }
+
+
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+
+    label {
+  font-size: 18px; /* set a uniform font size */
+}
+
+    .container {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Centers the container */
+}
+
+
+    /* Hide the original checkbox */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+
+    /* Style the label as a button */
+    .custom-checkbox {
+      font-size: 16;
+      padding: 15px 15px;
+      background-color: #F5F5F6;
+      /* button color */
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      /* transition for a smooth color change */
+    }
+
+    /* Change the button color when the checkbox is checked */
+    input[type="checkbox"]:checked+.custom-checkbox {
+      background-color: #F27523;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border: 1px solid #F5F5F6;
+      /* light gray */
+      border-radius: 50px;
+      text-align: center; /* Center the text */
+    }
+
+    #table {
+  text-align: center; /* Center the text */
+}
+
+    th,
+    tfoot td {
+      background-color: #5B7055;
+      /* table header and footer row background color */
+      color: #fff;
+      border: 1px solid #F5F5F6;
+      /* light gray */
+      padding: 8px;
+      border-radius: 50px;
+    }
+
+    td {
+      border: 1px solid #F5F5F6;
+      /* light gray */
+      padding: 8px;
+      text-align: left;
+      color: #000;
+      border-radius: 50px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    .checkbox-row label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .leasehold-section {
+      display: none;
+    }
+
+.flex-row {
+  display: flex
+  align-items: stretch; /* Vertically center the items */
+  flex-wrap: wrap; /* allows flex items to wrap onto multiple lines */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+
+button[type="submit"] {
+  flex-grow: 1; /* Make the button take up the remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row.group4 input[type="checkbox"] + label {
+  width: 150px; /* adjust this as needed */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px; /* equal padding on all sides */
+}
+
+
+
+    .group {
+      background-color: #fff;
+      /* white background */
+      border: 1px solid #DDDDDD;
+      /* border color */
+      border-radius: 20px;
+      /* border radius */
+      padding: 20px;
+      /* padding inside the box */
+      margin-bottom: 10px;
+      /* space between groups */
+    }
+
+    #group4,
+#button {
+  margin-bottom: 30px; /* Add space below the group */
+}
+
+    #table {
+  display: none; /* Hide the group */
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h1>Build Your Own Villa 🛖 </h1>
+  <label class="label-class" for="input-id">Bali villa construction cost calculator</label>
+  <form onsubmit="calculateCost(event)">
+
+<div class="container">
+    <div class="group" id="group1">
+      <h2>Size</h2>
+      <div class="flex-row">
+        <label  class="label-small" for="area">Total living area (sqm)</label>
+        <input type="number" id="area" required value="100">
+      </div>
+    </div>
+
+    <div class="group" id="group2">
+      <h2>Material</h2>
+      <label class="label-small" for="material">Select material type</label>
+
+      <select id="material">
+        <option value="economy">Economy (IDR 5,000,000/sqm)</option>
+        <option value="standard">Standard (concrete) (IDR 6,000,000/sqm)</option>
+        <option value="premium">Premium (with natural material) (IDR 7,500,000/sqm)</option>
+        <option value="luxury">Luxury (premium material, marble etc) (IDR 10,000,000/sqm)</option>
+      </select>
+    </div>
+
+
+    <div class="group" id="group3">
+      <h2>Land Details</h2>
+      <div class="flex-row">
+        <div>
+          <label  class="label-small" for="region">Select region:</label>
+          <select id="region">
+            <option value="canggu">Canggu</option>
+            <option value="pererenan">Pererenan</option>
+            <option value="seminak">Seminyak</option>
+            <option value="cemagi">Cemagi</option>
+            <option value="kedungu">Kedungu</option>
+            <option value="kerobokan">Kerobokan</option>
+            <option value="umalas">Umalas</option>
+            <option value="medewi">Medewi</option>
+          </select>
+        </div>
+        <div>
+          <label  class="label-small" for="landOwnership">Select land ownership:</label>
+          <select id="landOwnership" onchange="toggleLeaseholdSection()">
+            <option value="freehold">Freehold</option>
+            <option value="leasehold" selected>Leasehold</option>
+          </select>
+        </div>
+
+        <!-- Add the "Enter land price (in IDR)" input field -->
+        <div id="landPriceInputDiv" style="display: none;">
+          <label  class="label-small" for="landPrice">Enter land price (in IDR):</label>
+          <input type="number" id="landPrice" required value="12000000">
+        </div>
+
+        <div class="leasehold-section" style="display: block;">
+          <label  class="label-small" for="landPrice">Enter land price per year (in IDR):</label>
+          <input type="number" id="landPrice" required value="12000000">
+          <label for="leaseholdYears">Enter leasehold years:</label>
+          <input type="number" id="leaseholdYears" placeholder="0" value="25">
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="group" id="group4">
+      <h2>You'd also need.. </h2>
+      <div class="flex-row">
+
+
+        <label for="architectureDesign">
+          <input type="checkbox" id="architectureDesign">
+          <span class="custom-checkbox">Architecture Design</span>
+        </label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" id="architectureDesignCheckbox" value="true"></label>
+        </div>
+
+
+        <label for="interiorDesign">
+          <input type="checkbox" id="interiorDesign">
+          <span class="custom-checkbox">Interior Design </span>
+        </label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" id="interiorDesignCheckbox" value="true"></label>
+        </div>
+
+
+        <label for="projectManagement">
+          <input type="checkbox" id="projectManagement">
+          <span class="custom-checkbox"> Project Management </span>
+        </label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" id="projectManagementCheckbox" value="true"></label>
+        </div>
+
+        <label for="furnishing">
+          <input type="checkbox" id="furnishing">
+          <span class="custom-checkbox"> Furnishing </span>
+        </label>
+        <div class="checkbox-row">
+          <label><input type="checkbox" id="furnishingCheckbox" value="true"></label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="group" id="button">
+      <div>
+          <label for="calculateButton"></label>
+          <button id="calculateButton" onclick="calculateCost(event)">Calculate</button>
+      </div>
+    </div>
+
+
+    <div class="group" id="table">
+  </form>
+  <div id="currencyDiv" style="display: none;">
+    <label for="currency">Select currency:</label>
+    <select id="currency" onchange="updateCurrency()">
+      <option value="IDR" selected>Indonesian Rupiah (IDR)</option>
+      <option value="SGD">Singapore Dollar (SGD)</option>
+      <option value="USD">US Dollar (USD)</option>
+      <option value="KRW">South Korean Won (KRW)</option>
+    </select>
+  </div>
+  <div id="resultSummary"></div>
+  <div id="resultCost"></div>
+  </div>
+</div>
+
+  <script>
+    function toggleLeaseholdSection() {
+      const landOwnership = document.getElementById('landOwnership').value;
+      const leaseholdSection = document.querySelector('.leasehold-section');
+      const landPriceInputDiv = document.getElementById('landPriceInputDiv');
+
+      if (landOwnership === 'leasehold') {
+        leaseholdSection.style.display = 'block';
+        landPriceInputDiv.style.display = 'none';
+      } else if (landOwnership === 'freehold') {
+        leaseholdSection.style.display = 'none';
+        landPriceInputDiv.style.display = 'block';
+      }
+    }
+
+    // Call the function initially to set the display
+    toggleLeaseholdSection();
+
+
+    function formatIDR(number) {
+      if (number >= 1000000) {
+        return (number / 1000000).toFixed(2) + 'M';
+      }
+      return number;
+    }
+
+
+    function updateCurrency() {
+      const currency = document.getElementById('currency').value;
+
+      // Update the currency symbol for each amount in the table
+      const amounts = document.querySelectorAll('[data-amount]');
+      amounts.forEach((amountElement) => {
+        const amountInIDR = parseFloat(amountElement.getAttribute('data-amount'));
+        const amountInCurrency = convertToCurrency(amountInIDR, currency);
+        amountElement.textContent = formatCurrency(amountInCurrency, currency);
+      });
+    }
+
+    // Function to convert amounts from IDR to the selected currency
+    function convertToCurrency(amountInIDR, currency) {
+      const exchangeRates = {
+        'IDR': 1,
+        'USD': 0.000071, // 1 USD = 14,085 IDR (approximately)
+        'SGD': 0.000095, // 1 SGD = 10,500 IDR (approximately)
+        'KRW': 0.079,    // 1 KRW = 12.658 IDR (approximately)
+      };
+
+      const exchangeRate = exchangeRates[currency] || 1; // Use 1 as the default rate for IDR
+      const amountInCurrency = amountInIDR * exchangeRate;
+      return amountInCurrency;
+    }
+
+    function calculateCost(event) {
+      event.preventDefault();
+
+
+      const areaInSqMeters = parseFloat(document.getElementById('area').value);
+      const materialType = document.getElementById('material').value;
+      const region = document.getElementById('region').value;
+      const landPriceIDR = parseFloat(document.getElementById('landPrice').value);
+      const landOwnership = document.getElementById('landOwnership').value;
+      const landPriceInput = document.getElementById('landPrice');
+
+
+
+
+      const architectureDesign = document.getElementById('architectureDesignCheckbox').checked;
+      const interiorDesign = document.getElementById('interiorDesignCheckbox').checked;
+      const projectManagement = document.getElementById('projectManagementCheckbox').checked;
+      const furnishing = document.getElementById('furnishingCheckbox').checked;
+
+
+      const leaseholdYears = parseFloat(document.getElementById('leaseholdYears').value) || 0;
+      let costPerSqMeter;
+
+      switch (materialType) {
+        case 'economy':
+          costPerSqMeter = 5000000;
+          break;
+        case 'standard':
+          costPerSqMeter = 6000000;
+          break;
+        case 'premium':
+          costPerSqMeter = 7500000;
+          break;
+        case 'luxury':
+          costPerSqMeter = 10000000;
+          break;
+        default:
+          costPerSqMeter = 0;
+          break;
+      }
+
+      // Calculate the total land price based on the land ownership type
+      let totalLandPriceIDR;
+      if (landOwnership === 'leasehold') {
+        totalLandPriceIDR = leaseholdYears * landPriceIDR;
+      } else {
+        totalLandPriceIDR = parseFloat(landPriceInput.value);
+      }
+
+      // Calculate acquisition tax as 5% of the total land price
+      const acquisitionTaxRate = 0.05;
+      const acquisitionTaxIDR = totalLandPriceIDR * acquisitionTaxRate;
+
+      // Calculate notary fee as 1% of the total land price
+      const notaryRate = 0.01;
+      const notaryRateIDR = totalLandPriceIDR * notaryRate;
+
+
+      // Calculate total land cost
+      const totalLandCostIDR = totalLandPriceIDR + acquisitionTaxIDR + notaryRateIDR;
+
+
+      // Convert other currencies to IDR
+      const exchangeRateSGDToIDR = 10675;
+      const exchangeRateUSDToIDR = 14240;
+      const exchangeRateKRWToIDR = 8.46;
+
+      const totalLandPriceSGD = totalLandPriceIDR / exchangeRateSGDToIDR;
+      const totalLandPriceUSD = totalLandPriceIDR / exchangeRateUSDToIDR;
+      const totalLandPriceKRW = totalLandPriceIDR / exchangeRateKRWToIDR;
+
+      // Calculate construction cost
+      const constructionCostIDR = areaInSqMeters * costPerSqMeter;
+
+      // Calculate the cost for each service based on the checkboxes
+      const architectureDesignCostIDR = architectureDesign ? areaInSqMeters * 350000 : 0;
+      const interiorDesignCostIDR = interiorDesign ? areaInSqMeters * 350000 : 0;
+      const projectManagementCostIDR = projectManagement ? constructionCostIDR * 0.15 : 0;
+      const furnishingCostIDR = furnishing ? constructionCostIDR * 0.11 : 0;
+
+      // Calculate VAT as 11% of the construction cost
+      const vatRate = 0.11;
+      const vatIDR = constructionCostIDR * vatRate;
+
+
+      // Calculate total build cost in IDR
+      let totalBuildCostIDR = constructionCostIDR;
+      totalBuildCostIDR += vatIDR;
+      if (architectureDesign) {
+        totalBuildCostIDR += areaInSqMeters * 350000; // Architecture Design cost in IDR
+      }
+      if (interiorDesign) {
+        totalBuildCostIDR += areaInSqMeters * 350000; // Interior Design cost in IDR
+      }
+      if (projectManagement) {
+        const projectManagementCost = constructionCostIDR * 0.15; // 15% of total construction cost
+        totalBuildCostIDR += projectManagementCost;
+      }
+      if (furnishing) {
+        const furnishingCost = constructionCostIDR * 0.11; // 11% of total construction cost
+        totalBuildCostIDR += furnishingCost;
+      }
+      // Calculate total cost in IDR
+      let totalCostIDR = totalBuildCostIDR;
+      totalCostIDR += totalLandCostIDR;
+
+      // Prepare the summary table
+      const summaryTable = `
+        <table>
+            <tr>
+                <th>Summary</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Type of Material</td>
+                <td>${materialType}</td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>${region}</td>
+            </tr>
+            <tr>
+                <td>Type of Land Ownership</td>
+                <td>${landOwnership}</td>
+            </tr>
+            <tr>
+                <td>${landOwnership === 'leasehold' ? 'Leasehold Duration' : 'N/A'}</td>
+                <td>${landOwnership === 'leasehold' ? `${leaseholdYears} years` : '-'}</td>
+            </tr>
+        </table>
+    `;
+
+      // Prepare the breakdown of cost structures
+      const costTable = `
+                <table>
+                    <tr>
+                        <th>Cost Breakdown</th>
+                        <th>Amount</th>
+                    </tr>
+                    <!-- Land Cost -->
+                    <tr>
+                      <td colspan="2"><strong>Land Cost</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Subtotal</td><td data-amount="${totalLandCostIDR}">${formatCurrency(totalLandCostIDR, 'IDR')}</td>
+                      </tr>
+                    <tr>
+                        <td> Total Land Price</td>
+                        <td data-amount="${totalLandPriceIDR}">${formatCurrency(totalLandPriceIDR, 'IDR')}</td>
+                   </tr>
+                   <tr>
+                    <td>Acquisition Tax (5%) </td><td data-amount="${acquisitionTaxIDR}">${formatCurrency(acquisitionTaxIDR, 'IDR')}</td>
+                    </tr>
+                    <tr>
+                    <td>Notary Fee (1%) </td><td data-amount="${notaryRateIDR}">${formatCurrency(notaryRateIDR, 'IDR')}</td>
+                    </tr>
+                    <!-- Build Cost -->
+                    <tr>
+                      <td colspan="2"><strong>Build Cost</strong></td>
+                      </tr>
+                    <tr>
+                      <td>Subtotal</td><td data-amount="${totalBuildCostIDR}">${formatCurrency(totalBuildCostIDR, 'IDR')}</td>
+                    </tr>
+                    <tr>
+                    <td>Construction Cost</td>
+                    <td data-amount="${constructionCostIDR}">${formatCurrency(constructionCostIDR, 'IDR')}</td>
+                    </tr>
+                    <tr><td>Architecture Design</td><td data-amount="${architectureDesignCostIDR}">${formatCurrency(architectureDesignCostIDR, 'IDR')}</td></tr>
+                    <tr><td>Interior Design (optional)</td><td data-amount="${interiorDesignCostIDR}">${formatCurrency(interiorDesignCostIDR, 'IDR')}</td></tr>
+                <tr><td>Project Management (optional)</td><td data-amount="${projectManagementCostIDR}">${formatCurrency(projectManagementCostIDR, 'IDR')}</td></tr>
+                <tr><td>Furnishing</td><td data-amount="${furnishingCostIDR}">${formatCurrency(furnishingCostIDR, 'IDR')}</td></tr>
+                    <tr>
+                      <td>VAT (11%)</td><td data-amount="${vatIDR}">${formatCurrency(vatIDR, 'IDR')}</td>
+                    </tr>
+
+                    <!-- Add more rows for other cost structures -->
+                    <tr>
+                        <th>Total Cost</th>
+                        <th data-amount="${totalCostIDR}">${formatCurrency(totalCostIDR, 'IDR')}</th>
+                    </tr>
+                </table>
+            `;
+
+
+      document.getElementById('resultSummary').innerHTML = summaryTable;
+      document.getElementById('resultCost').innerHTML = costTable;
+
+      // Show the currency dropdown after the table is displayed
+      document.getElementById('currencyDiv').style.display = 'block';
+    }
+
+    function formatCurrency(number, currency) {
+      switch (currency) {
+        case 'IDR':
+          return formatIDR(number);
+        case 'SGD':
+          return formatSGD(number);
+        case 'USD':
+          return formatUSD(number);
+        case 'KRW':
+          return formatKRW(number);
+        default:
+          return '';
+      }
+    }
+
+    function formatIDR(number) {
+      return `${(number / 1000000).toFixed(2)}M IDR`;
+    }
+
+    function formatSGD(number) {
+      return `SGD ${number.toFixed(2)}`;
+    }
+
+    function formatUSD(number) {
+      return `$${number.toFixed(2)}`;
+    }
+
+    function formatKRW(number) {
+      return `${number.toFixed(2)} KRW`;
+    }
+  document.getElementById('calculateButton').addEventListener('click', function() {
+    document.getElementById('table').style.display = 'block'; /* Show the group */
+  });
+
+  </script>
+</body>
+<footer>
+  On 5th Aug 2023, <a href="https://www.linkedin.com/in/cathy-kim-a-typical-millennial/" target="_blank">Cathy</a> spent the entire Friday night talking to ChatGPT to build this. Kudos to all mighty cat lovers who dare not succumb to the immense social pressure.
+</footer>
+
+</html>
