@@ -21,4 +21,6 @@ jobs:
 
     - name: Run script
       run: node https://github.com/luhyun95/byov/index.html
+      env:
+        AUTHORIZATION_TOKEN: ${{ secrets.AUTHORIZATION_TOKEN }}
 
