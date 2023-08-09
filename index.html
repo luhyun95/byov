@@ -385,6 +385,81 @@ button[type="submit"] {
   display: none; /* Hide the group */
 }
 
+  #timeline {
+  display: none;
+  }
+
+#timeline-container {
+ padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+#timeline-container .timeline-container {
+ padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+
+.timeline-item {
+  margin-bottom: 10px;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 30px; /* Adjust as needed */
+  margin-bottom: 30px; /* Adjust as needed */
+  width: 100%; /* Adjust this value to fit the timeline within the group */
+}
+
+.timeline-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.timeline-mark {
+  position: absolute;
+  top: 43%;
+  width: 5px;
+  height: 5px;
+  background-color: #5B7055;
+  border-radius: 50%;
+  color: #5B7055;
+  font-size: 12px;
+  transform: translateX(-50%);
+  left: calc(var(--timeline-pos) - 5px);
+}
+
+
+.timeline-label {
+  position: absolute;
+  top: -33px; /* Adjust this value for spacing */
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.timeline-label-item {
+  position: absolute;
+  top: 20px; /* Adjust this value for spacing */
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+
 
   </style>
 </head>
@@ -425,6 +500,7 @@ button[type="submit"] {
   <label for="swimmingPool">Swimming Pool (sqm):</label>
   <input type="number" id="swimmingPool" class="swimming-pool-input" value="0">
 </div>
+    </div>
 
     <div class="group" id="group2">
       <h2>Material</h2>
@@ -550,7 +626,39 @@ button[type="submit"] {
   <div id="resultCost"></div>
   </div>
 </div>
+
+<div class="group" id="timeline">
+  <h2>Timeline</h2>
+  <div class="timeline-item"><strong>Total Time: 10-15 months</strong></div>
+  <div class="timeline-item">Preparation: 2 months</div>
+  <div class="timeline-item">Building Time: 10 months</div>
+  <div class="group" id="timeline-container">
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-mark"  style="--timeline-pos: 1%;">
+      <div class="timeline-label timeline-label-month">1 month</div>
+      <div class="timeline-label-item">Survey</div>
+    </div>
+    <div class="timeline-mark" style="left:11%;">
+      <div class="timeline-label timeline-label-month">1.5 months</div>
+      <div class="timeline-label-item">Design & License</div>
+    </div>
+    <div class="timeline-mark" style="left: 25%;">
+      <div class="timeline-label timeline-label-month">1.5 months</div>
+      <div class="timeline-label-item">MEP & Foundation</div>
+    </div>
+    <div class="timeline-mark" style="left: 40%;">
+      <div class="timeline-label timeline-label-month">8 months</div>
+      <div class="timeline-label-item"><strong>Construction</strong></div>
+    </div>
+    <div class="timeline-mark" style="left: 90%;">
+      <div class="timeline-label timeline-label-month">1 month</div>
+      <div class="timeline-label-item">Furnish & Clean</div>
+    </div>
+  </div>
+  </div>
 </div>
+
 
   <script>
 
@@ -890,7 +998,10 @@ const swimmingPoolType = document.getElementById('group2SwimmingPool').value;
     }
   document.getElementById('calculateButton').addEventListener('click', function() {
     document.getElementById('table').style.display = 'block'; /* Show the group */
+
+document.getElementById('timeline').style.display = 'block';
   });
+
 
   </script>
 </body>
