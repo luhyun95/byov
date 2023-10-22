@@ -14,7 +14,7 @@ body {
 
 /* Style the navigation */
 nav {
-  background-color: #22331D;
+  background-color: #f1efe9;
   padding: 1rem;
   text-align: center;
 }
@@ -300,7 +300,7 @@ text-align: center; /* Center the text */
 
   th,
   tfoot td {
-    background-color: #5B7055;
+    background-color: #f1efe9;
     /* table header and footer row background color */
     color: #fff;
     border: 1px solid #F5F5F6;
