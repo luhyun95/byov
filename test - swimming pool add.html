@@ -2,31 +2,13 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F3N49KJ9K"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-3F3N49KJ9K');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Building your own villa, house, or hotel, airbnb in Bali? Calculate the cost for building your own property in Bali. Calculate investment ROI. Get quotations from professionals with one click. ">
-  <meta name="keywords" content="Bali villa construction, Build your own villa Bali, Villa construction cost Bali, Architects in Bali for villa, Villa design and build Bali, Cost estimate for villa in Bali, Bali villa construction guide, Custom villa builders Bali, Villa construction process Bali, Best architects for Bali villas, DIY villa in Bali, Bali villa project management, Affordable villa construction Bali, Villa construction materials Bali, Bali villa development services, Budget-friendly villa design Bali, Villa construction quotes Bali, Experienced villa builders Bali, Villa construction consultation Bali, Step-by-step villa building Bali">
-  <meta name="author" content="Cathy">
-  <meta name="robots" content="index, follow">
-  <!-- OpenGraph meta tags for social media sharing -->
-  <meta property="og:title" content="Bali Villa Construction Cost Calculator">
-  <meta property="og:description" content="Building your own villa, house, or hotel, airbnb in Bali? Calculate the cost for building your own property in Bali. Calculate investment ROI. Get quotations from professionals with one click.">
-  <meta property="og:image" content="https://i.ibb.co/s5Z4D5D/nomadjung-luxury-modern-villa-architecture-in-bali-background-j-f24bc102-861c-48c5-ba14-328404ca9180.png">
-  <meta property="og:url" content="https://byovbali.com">
-  <meta name="twitter:card" content="https://i.ibb.co/s5Z4D5D/nomadjung-luxury-modern-villa-architecture-in-bali-background-j-f24bc102-861c-48c5-ba14-328404ca9180.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='0' y='80' font-size='90'%3E🛖%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+
   <title>Bali Villa Construction Cost Calculator</title>
   <style>
   body {
@@ -393,81 +375,6 @@ button[type="submit"] {
   display: none; /* Hide the group */
 }
 
-  #timeline {
-  display: none;
-  }
-
-#timeline-container {
- padding-bottom: 30px;
-  padding-top: 10px;
-}
-
-#timeline-container .timeline-container {
- padding-bottom: 30px;
-  padding-top: 10px;
-}
-
-
-.timeline-item {
-  margin-bottom: 10px;
-}
-
-.timeline-container {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 30px; /* Adjust as needed */
-  margin-bottom: 30px; /* Adjust as needed */
-  width: 100%; /* Adjust this value to fit the timeline within the group */
-}
-
-.timeline-line {
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.timeline-mark {
-  position: absolute;
-  top: 43%;
-  width: 5px;
-  height: 5px;
-  background-color: #5B7055;
-  border-radius: 50%;
-  color: #5B7055;
-  font-size: 12px;
-  transform: translateX(-50%);
-  left: calc(var(--timeline-pos) - 5px);
-}
-
-
-.timeline-label {
-  position: absolute;
-  top: -33px; /* Adjust this value for spacing */
-  left: 0;
-  transform: translateX(-50%);
-  font-size: 12px;
-  text-align: center;
-  width: 100%;
-}
-
-
-
-.timeline-label-item {
-  position: absolute;
-  top: 20px; /* Adjust this value for spacing */
-  left: 0;
-  transform: translateX(-50%);
-  font-size: 12px;
-  text-align: center;
-  width: 100%;
-}
-
 
   </style>
 </head>
@@ -508,6 +415,7 @@ button[type="submit"] {
   <label for="swimmingPool">Swimming Pool (sqm):</label>
   <input type="number" id="swimmingPool" class="swimming-pool-input" value="0">
 </div>
+    </div>
 
     <div class="group" id="group2">
       <h2>Material</h2>
@@ -619,8 +527,6 @@ button[type="submit"] {
 
 
     <div class="group" id="table">
-      <h2>Cost Estimate</h2>
-        <label  class="label-small" for="area">Reference only. Average based on real quotes in Bali.</label>
   </form>
   <div id="currencyDiv" style="display: none;">
     <label for="currency">Select currency:</label>
@@ -634,40 +540,7 @@ button[type="submit"] {
   <div id="resultSummary"></div>
   <div id="resultCost"></div>
   </div>
-
-<div class="group" id="timeline">
-  <h2>Timeline</h2>
-  <div class="timeline-item"><strong>Total Time: 10-15 months</strong></div>
-  <div class="timeline-item">Preparation: 2 months</div>
-  <div class="timeline-item">Building Time: 10 months</div>
-  <div class="group" id="timeline-container">
-  <div class="timeline-container">
-    <div class="timeline-line"></div>
-    <div class="timeline-mark"  style="--timeline-pos: 1%;">
-      <div class="timeline-label timeline-label-month">1 month</div>
-      <div class="timeline-label-item">Survey</div>
-    </div>
-    <div class="timeline-mark" style="left:11%;">
-      <div class="timeline-label timeline-label-month">1.5 months</div>
-      <div class="timeline-label-item">Design & License</div>
-    </div>
-    <div class="timeline-mark" style="left: 25%;">
-      <div class="timeline-label timeline-label-month">1.5 months</div>
-      <div class="timeline-label-item">MEP & Foundation</div>
-    </div>
-    <div class="timeline-mark" style="left: 40%;">
-      <div class="timeline-label timeline-label-month">8 months</div>
-      <div class="timeline-label-item"><strong>Construction</strong></div>
-    </div>
-    <div class="timeline-mark" style="left: 90%;">
-      <div class="timeline-label timeline-label-month">1 month</div>
-      <div class="timeline-label-item">Furnish & Clean</div>
-    </div>
-  </div>
-  </div>
 </div>
-</div>
-
 
   <script>
 
@@ -711,6 +584,81 @@ function expand(img) {
   }
 }
 
+//midjourney API testing
+
+//POST 'imagine'
+  let inputField = document.querySelector('.input-field > input'); // Get the input field
+
+inputField.addEventListener('keyup', function(event) {
+  // Check if 'Enter' was pressed
+  if (event.keyCode === 13) {
+    event.preventDefault();
+
+    const promptInput = document.getElementById('prompt-input').value;
+    const preMadeKeywords = "architecture, architecture render, photographic render, 8k, background tropical jungle, --ar 3:2";
+    const data = JSON.stringify({
+      "prompt": preMadeKeywords + promptInput,
+      "callbackURL": "byovbali.com"
+    });
+
+    const config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://api.midjourneyapi.io/v2/imagine',
+      headers: {
+        'Authorization': '2520ec03-1594-4c0a-8a99-6e7561c1e8d3',
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+
+    axios(config)
+    .then(response => {
+        // Get the task ID from the response
+        const taskId = response.data.taskId;
+
+        // Prepare the data and configuration for the second API call
+        const data2 = JSON.stringify({
+          "taskId": taskId
+        });
+
+        const config2 = {
+          method: 'post',
+          maxBodyLength: Infinity,
+          url: 'https://api.midjourneyapi.io/v2/result',
+          headers: {
+            'Authorization': '2520ec03-1594-4c0a-8a99-6e7561c1e8d3',
+            'Content-Type': 'application/json'
+          },
+          data: data2
+        };
+
+        // Make the second API call
+        return axios(config2);
+    })
+    .then(response => {
+        console.log(response.data);
+        // Assuming there are 4 items in the response
+        if(response.data.length === 4) {
+            for(let i = 1; i <= 4; i++) {
+                // Get each image element by id
+                const img = document.getElementById('item' + i);
+                // Set the src attribute to the imageURL
+                img.src = response.data[i-1].imageURL;
+            }
+        } else {
+            console.log('Expected 4 items in the response data');
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+  }
+})
+
+
+
+//    {taskId: "0800910464154541"}
 // Trigger the function on page load
 
     function toggleLeaseholdSection() {
@@ -776,8 +724,8 @@ function expand(img) {
       const landOwnership = document.getElementById('landOwnership').value;
       const landPriceInput = document.getElementById('landPrice');
 
-const swimmingPoolType = document.getElementById('group2SwimmingPool').value;
-  const swimmingPoolValue = parseFloat(document.getElementById('swimmingPool').value);
+
+
 
       const architectureDesign = document.getElementById('architectureDesignCheckbox').checked;
       const interiorDesign = document.getElementById('interiorDesignCheckbox').checked;
@@ -836,18 +784,8 @@ const swimmingPoolType = document.getElementById('group2SwimmingPool').value;
       const totalLandPriceUSD = totalLandPriceIDR / exchangeRateUSDToIDR;
       const totalLandPriceKRW = totalLandPriceIDR / exchangeRateKRWToIDR;
 
-      // Calculate house construction cost
+      // Calculate construction cost
       const constructionCostIDR = areaInSqMeters * costPerSqMeter;
-
-      // Calculate swimmingpool cost
-       let swimmingPoolCostIDR = 0;
-  if (swimmingPoolType === 'naturalStone') {
-    swimmingPoolCostIDR = swimmingPoolValue * 5000000;
-  } else if (swimmingPoolType === 'ceramicTiles') {
-    swimmingPoolCostIDR = swimmingPoolValue * 4800000;
-  } else if (swimmingPoolType === 'mozaicTiles') {
-    swimmingPoolCostIDR = swimmingPoolValue * 5200000;
-  }
 
       // Calculate the cost for each service based on the checkboxes
       const architectureDesignCostIDR = architectureDesign ? areaInSqMeters * 350000 : 0;
@@ -857,17 +795,12 @@ const swimmingPoolType = document.getElementById('group2SwimmingPool').value;
 
       // Calculate VAT as 11% of the construction cost
       const vatRate = 0.11;
-      const vatIDR = (constructionCostIDR + swimmingPoolCostIDR) * vatRate;
+      const vatIDR = constructionCostIDR * vatRate;
 
 
       // Calculate total build cost in IDR
       let totalBuildCostIDR = constructionCostIDR;
       totalBuildCostIDR += vatIDR;
-
-      if (swimmingPoolValue !== 0) {
-        totalBuildCostIDR += swimmingPoolCostIDR;
-      }
-
       if (architectureDesign) {
         totalBuildCostIDR += areaInSqMeters * 350000; // Architecture Design cost in IDR
       }
@@ -944,12 +877,8 @@ const swimmingPoolType = document.getElementById('group2SwimmingPool').value;
                       <td>Subtotal</td><td data-amount="${totalBuildCostIDR}">${formatCurrency(totalBuildCostIDR, 'IDR')}</td>
                     </tr>
                     <tr>
-                    <td>Villa Construction </td>
+                    <td>Construction Cost</td>
                     <td data-amount="${constructionCostIDR}">${formatCurrency(constructionCostIDR, 'IDR')}</td>
-                    </tr>
-                    <tr>
-                        <td>Swimming Pool</td>
-                        <td data-amount="${swimmingPoolCostIDR}">${formatCurrency(swimmingPoolCostIDR, 'IDR')}</td>
                     </tr>
                     <tr><td>Architecture Design</td><td data-amount="${architectureDesignCostIDR}">${formatCurrency(architectureDesignCostIDR, 'IDR')}</td></tr>
                     <tr><td>Interior Design (optional)</td><td data-amount="${interiorDesignCostIDR}">${formatCurrency(interiorDesignCostIDR, 'IDR')}</td></tr>
@@ -1007,10 +936,7 @@ const swimmingPoolType = document.getElementById('group2SwimmingPool').value;
     }
   document.getElementById('calculateButton').addEventListener('click', function() {
     document.getElementById('table').style.display = 'block'; /* Show the group */
-
-document.getElementById('timeline').style.display = 'block';
   });
-
 
   </script>
 </body>
