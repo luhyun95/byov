@@ -1,0 +1,486 @@
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  display: inline-block;
+}
+
+nav a.cta {
+  background-color: #e8491d;
+  border-radius: 5px;
+}
+
+/* Blog post styles */
+.blog-post {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+  white-space: pre-line;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  margin: 20px;
+  background-color: #F0EDE6;
+  text-align: center;
+}
+
+.table {
+padding-bottom: 100px;  /* Adjust the value as needed */
+}
+
+.footer {
+padding-top: 100px;  /* Adjust the value as needed */
+}
+
+
+
+.input-field input {
+width: 100%;
+padding: 10px;
+}
+
+.input-field > input {
+width: 100%;
+box-sizing: border-box;
+}
+
+.leasehold-section > div {
+flex: 1;
+}
+
+
+.gallery {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin: 20px 0; /* Space before and after the gallery */
+}
+
+.gallery-item {
+flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+overflow: hidden; /* Ensures the content does not spill out of the box */
+}
+
+.gallery-img {
+width: 100%;
+height: 100%;
+max-height: 100%; /* Cap the height to the parent's height */
+object-fit: cover; /* Ensures the images cover the full space */
+flex-basis: calc(50% - 10px); /* 2 photos per row, 10px gap */
+padding-bottom: 30%; /* 3:2 aspect ratio */
+transition: width 0.5s; /* Transition for smooth width change */
+background-color: #ccc; /* Background color for placeholder */
+margin: 10px; /* Some space around the images */
+position: relative; /* To enable absolute positioning for the img tag */
+}
+
+.flex-row > .gallery-item {
+flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+}
+
+
+footer {
+background-color: #22331D; /* or any color you prefer */
+color: white; /* or any color you prefer */
+text-align: center;
+font-family:'EB Garamond', serif;
+padding: 20px;
+}
+
+  label[for="area"] {
+    font-size: 18px;
+    /* Adjust as needed */
+  }
+
+  input[id="area"] {
+    font-size: 18px;
+    /* Adjust as needed */
+    padding: 10px;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+
+
+  input,
+  select {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #F5F5F6;
+    /* input field background color */
+    border: 1px solid #F5F5F6;
+    /* light gray */
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  input[type="button"],
+  input[type="submit"],
+  button {
+    padding: 15px 32px;
+    /* Larger padding increases the button size */
+    font-size: 16px;
+    /* You can adjust this as needed */
+    background-color: #F27523;
+    /* button background color */
+    color: #fff;
+    /* white font color */
+    border: none;
+    /* remove border */
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  input[type="button"]:hover,
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: #5B7055;
+    /* changed hover color */
+  }
+
+  input:focus,
+  select:focus {
+    outline-color: #F27523;
+    /* outline color when focused */
+  }
+
+  a {
+color: #00FF00; /* Bright green */
+}
+
+
+#calculateButton {
+width: 100%; /* Fill the entire width of the group */
+height: 60px; /* Set a suitable height */
+background-color: #F27523; /* Button color */
+color: #fff; /* Text color */
+border: none;
+border-radius: 20px;
+font-size: 20px; /* Set a suitable font size */
+cursor: pointer;
+margin-bottom: 60px;
+transition: background-color 0.3s ease; /* transition for a smooth color change */
+}
+
+#calculateButton:hover {
+background-color: #5B7055;
+}
+
+
+#button {
+background-color: transparent; /* transparent background */
+border: none; /* no border */
+padding: 0; /* no padding */
+}
+
+
+  h1 {
+    font-family: 'Noto Serif', serif;
+    color: #22331D;
+    margin-top: 60px;
+    padding-top: 20px;
+    font-size: 40px;
+  }
+
+  h2,
+.group h2 {
+font-family: 'Noto Serif', serif;
+text-align: center;
+font-size: 26px;
+color: #F27523;
+margin: 10px; /* remove top margin */
+padding: 5px; /* add some padding if necessary */
+}
+
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-align: center;
+  }
+
+  .label-class {
+padding-bottom: 60px; /* Add padding under the label */
+}
+
+  .label-small {
+    padding-bottom: 10px;
+  }
+
+  body {
+    font-family: 'Oswald', sans-serif;
+    margin: 20px;
+    background-color: #F0EDE6;
+    /* website background color */
+    text-align: center;
+    /* Align text to the center */
+  }
+
+
+  #result {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+
+  label {
+font-size: 18px; /* set a uniform font size */
+}
+
+  .container {
+max-width: 600px; /* Adjust as needed */
+margin: 0 auto; /* Centers the container */
+}
+
+
+  /* Hide the original checkbox */
+  input[type="checkbox"] {
+    display: none;
+  }
+
+
+  /* Style the label as a button */
+  .custom-checkbox {
+    font-size: 16;
+    padding: 15px 15px;
+    background-color: #F5F5F6;
+    /* button color */
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    /* transition for a smooth color change */
+  }
+
+  /* Change the button color when the checkbox is checked */
+  input[type="checkbox"]:checked+.custom-checkbox {
+    background-color: #F27523;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate; /* This allows border-spacing to work */
+border-spacing: 0 5px; /* 0 horizontal spacing, 5px vertical spacing */
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-align: center; /* Center the text */
+  }
+
+  #table {
+text-align: center; /* Center the text */
+}
+
+  th,
+  tfoot td {
+    background-color: #5B7055;
+    /* table header and footer row background color */
+    color: #fff;
+    border: 1px solid #F5F5F6;
+    /* light gray */
+    padding: 8px;
+    border-radius: 50px;
+  }
+
+  .highlighted-row {
+background-color: #6A7369;
+}
+
+  td {
+    border: 1px solid transparent;
+    padding: 8px;
+    text-align: left;
+    color: #000;
+    border-radius: 50px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  .checkbox-row label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .leasehold-section {
+    display: none;
+  }
+
+.flex-row {
+display: flex;
+align-items: stretch; /* Vertically center the items */
+flex-wrap: wrap; /* allows flex items to wrap onto multiple lines */
+justify-content: space-between;
+gap: 20px;
+}
+
+.flex-row > div {
+flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+}
+
+  @media screen and (max-width: 600px) {
+#material {
+  width: 100%; /* Make the dropdown box take the full width of its container on small screens */
+}
+}
+
+
+
+button[type="submit"] {
+flex-grow: 1; /* Make the button take up the remaining space */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.flex-row.group4 input[type="checkbox"] + label {
+width: 150px; /* adjust this as needed */
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0px; /* equal padding on all sides */
+}
+
+.flex-row > .box {
+flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
+background-color: #ccc; /* Some placeholder styling */
+padding: 20px; /* Some placeholder styling */
+}
+
+  .group {
+    background-color: #fff;
+    /* white background */
+    border: 1px solid #DDDDDD;
+    /* border color */
+    border-radius: 20px;
+    /* border radius */
+    padding: 20px;
+    /* padding inside the box */
+    margin-bottom: 10px;
+    /* space between groups */
+  }
+
+  #group4,
+#button {
+margin-bottom: 30px; /* Add space below the group */
+}
+
+  #table {
+display: none; /* Hide the group */
+}
+
+#timeline {
+display: none;
+}
+
+#timeline-container {
+padding-bottom: 30px;
+padding-top: 10px;
+}
+
+#timeline-container .timeline-container {
+padding-bottom: 30px;
+padding-top: 10px;
+}
+
+
+.timeline-item {
+margin-bottom: 10px;
+}
+
+.timeline-container {
+position: relative;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+margin-top: 30px; /* Adjust as needed */
+margin-bottom: 30px; /* Adjust as needed */
+width: 100%; /* Adjust this value to fit the timeline within the group */
+}
+
+.timeline-line {
+width: 100%;
+height: 2px;
+background-color: #ccc;
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+}
+
+.timeline-mark {
+position: absolute;
+top: 43%;
+width: 5px;
+height: 5px;
+background-color: #5B7055;
+border-radius: 50%;
+color: #5B7055;
+font-size: 12px;
+transform: translateX(-50%);
+left: calc(var(--timeline-pos) - 5px);
+}
+
+
+.timeline-label {
+position: absolute;
+top: -33px; /* Adjust this value for spacing */
+left: 0;
+transform: translateX(-50%);
+font-size: 12px;
+text-align: center;
+width: 100%;
+}
+
+
+
+.timeline-label-item {
+position: absolute;
+top: 20px; /* Adjust this value for spacing */
+left: 0;
+transform: translateX(-50%);
+font-size: 12px;
+text-align: center;
+width: 100%;
+}

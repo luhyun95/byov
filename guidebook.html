@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Guidebook</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation container -->
+  <div id="nav-container"></div>
+
+  <main>
+    <!-- List of blog posts -->
+    <ul>
+      <li><a href="how-to-build-a-hotel-in-bali.html">How to Build a Hotel in Bali</a></li>
+      <!-- Add other blog posts here... -->
+    </ul>
+  </main>
+
+  <!-- ... (other body elements) ... -->
+
+  <script>
+    // Load the navigation
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-container').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error fetching navigation:', error);
+      });
+  </script>
+</body>
+
+</html>
