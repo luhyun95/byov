@@ -7,8 +7,8 @@
 /* Set background color and font for the whole page */
 body {
   font-family: 'Noto Serif', serif;
-  background-color: #F0EDE6;
-  color: #333;
+  background-color: #f1efe9;
+  color: #282828;
   line-height: 1.6;
 }
 
@@ -30,19 +30,20 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: #282828;
   padding: 0.5rem 1rem;
   display: inline-block;
 }
 
 nav a.cta {
-  background-color: #F27523;
+  background-color: #353535;
   border-radius: 0.25rem;
+  color: #f9f7f5
 }
 
 /* Style the blog post */
 .blog-post {
-  background-color: white;
+  background-color: #f1efe9;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   margin: 1rem 0;
@@ -50,7 +51,6 @@ nav a.cta {
 }
 
 h2 {
-  color: #F27523;
   margin-bottom: 1rem;
 }
 
@@ -58,12 +58,6 @@ p {
   margin-bottom: 1rem;
 }
 
-body {
-  font-family: 'Noto Serif', serif;
-  margin: 20px;
-  background-color: #F0EDE6;
-  text-align: center;
-}
 
 .table {
 padding-bottom: 100px;  /* Adjust the value as needed */
@@ -121,10 +115,7 @@ flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
 
 
 footer {
-background-color: #22331D; /* or any color you prefer */
-color: white; /* or any color you prefer */
 text-align: center;
-font-family:'EB Garamond', serif;
 padding: 20px;
 }
 
@@ -222,7 +213,6 @@ padding: 0; /* no padding */
 
   h1 {
     font-family: 'Noto Serif', serif;
-    color: #22331D;
     margin-top: 60px;
     padding-top: 20px;
     font-size: 40px;
@@ -233,7 +223,6 @@ padding: 0; /* no padding */
 font-family: 'Noto Serif', serif;
 text-align: center;
 font-size: 26px;
-color: #F27523;
 margin: 10px; /* remove top margin */
 padding: 5px; /* add some padding if necessary */
 }
@@ -252,15 +241,6 @@ padding-bottom: 60px; /* Add padding under the label */
 
   .label-small {
     padding-bottom: 10px;
-  }
-
-  body {
-    font-family: 'Oswald', sans-serif;
-    margin: 20px;
-    background-color: #F0EDE6;
-    /* website background color */
-    text-align: center;
-    /* Align text to the center */
   }
 
 
@@ -340,6 +320,18 @@ background-color: #6A7369;
     color: #000;
     border-radius: 50px;
   }
+
+  th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #F27523;
+  color: white;
+}
 
   tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -495,41 +487,4 @@ transform: translateX(-50%);
 font-size: 12px;
 text-align: center;
 width: 100%;
-}
-
-body {
-    color: #282828;
-    font-family: "Open Sans", sans-serif;
-    background-color: #f1efe9;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-h5 {
-    font-size: 13px;
-}
-
-p {
-    font-size: 14px;
-    line-height: 21px;
-}
-
-a {
-    color: #282828;
-    text-decoration: none;
-}
-
-.tooltip {
-    background-color: #353535;
-    color: #f9f7f5;
-}
-
-.overlay {
-    background-color: rgba(40,40,40,.92);
 }
