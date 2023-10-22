@@ -496,3 +496,40 @@ font-size: 12px;
 text-align: center;
 width: 100%;
 }
+
+body {
+    color: #282828;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1efe9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 13px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+a {
+    color: #282828;
+    text-decoration: none;
+}
+
+.tooltip {
+    background-color: #353535;
+    color: #f9f7f5;
+}
+
+.overlay {
+    background-color: rgba(40,40,40,.92);
+}
