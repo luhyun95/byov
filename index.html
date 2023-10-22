@@ -29,6 +29,32 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='0' y='80' font-size='90'%3E🛖%3C/text%3E%3C/svg%3E" type="image/svg+xml">
   <title>Bali Villa Construction Cost Calculator</title>
   <style>
+
+  nav {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  background-color: #f4f4f4;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+}
+nav ul li a:hover {
+  background-color: #ddd;
+}
+
   body {
     font-family: 'Noto Serif', serif;
     margin: 20px;
@@ -473,6 +499,14 @@ button[type="submit"] {
 </head>
 
 <body>
+  <nav>
+  <ul>
+    <li><a href="#guidebook">Guidebook</a></li>
+    <li><a href="#land-investment">Land Investment</a></li>
+    <li><a href="#cost-calculator">Cost Calculator</a></li>
+    <li><a href="#roi-calculator">ROI Calculator</a></li>
+  </ul>
+</nav>
   <h1>Build Your Own Villa 🛖 </h1>
   <label class="label-class" for="input-id">Bali villa construction cost calculator</label>
   <form onsubmit="calculateCost(event)">
