@@ -95,7 +95,7 @@ nav a.cta {
 .blog-post {
   background-color: #E6D6BE;
   border: 1px solid #AF9980;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   margin: 1rem 0;
   padding: 1rem;
 }
@@ -177,7 +177,7 @@ padding: 20px;
     /* input field background color */
     border: 1px solid #AF9980;
     /* light gray */
-    border-radius: 50px;
+    border-radius: 0.25rem;
     text-align: center;
   }
 
@@ -194,7 +194,7 @@ padding: 20px;
     /* white font color */
     border: none;
     /* remove border */
-    border-radius: 50px;
+    border-radius: 0.25rem;
     cursor: pointer;
   }
 
@@ -218,7 +218,7 @@ height: 60px; /* Set a suitable height */
 background-color: #7A6E51; /* Button color */
 color: #EEE5D3; /* Text color */
 border: none;
-border-radius: 20px;
+border-radius: 0.25rem;
 font-size: 20px; /* Set a suitable font size */
 cursor: pointer;
 margin-bottom: 60px;
@@ -277,7 +277,7 @@ margin: 0 auto; /* Centers the container */
     /* input field background color */
     border: 1px solid #AF9980;
     /* light gray */
-    border-radius: 50px;
+    border-radius: 0.25rem;
     text-align: center;
     transition: background-color 0.3s ease;
     /* transition for a smooth color change */
@@ -296,7 +296,7 @@ margin: 0 auto; /* Centers the container */
     border-spacing: 0 5px; /* 0 horizontal spacing, 5px vertical spacing */
     border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 50px;
+    border-radius: 0.25rem;
     text-align: center; /* Center the text */
   }
 
@@ -311,7 +311,7 @@ text-align: center; /* Center the text */
     color: #EEE5D3;
     /* light gray */
     padding: 8px;
-    border-radius: 50px;
+    border-radius: 0.25rem;
   }
 
   .highlighted-row {
@@ -325,10 +325,9 @@ background-color: #7A6E51;
     background-color: #D7BF9D;
     /* input field background color */
     border: 1px solid #AF9980;
-    border-radius: 50px;
+    border-radius: 0.25rem;
     padding: 8px;
     text-align: left;
-    border-radius: 50px;
   }
 
   th,
@@ -401,7 +400,7 @@ padding: 20px; /* Some placeholder styling */
     /* white background */
     border: 1px solid #AF9980;
     /* border color */
-    border-radius: 20px;
+    border-radius: 0.25rem;
     /* border radius */
     padding: 20px;
     /* padding inside the box */
