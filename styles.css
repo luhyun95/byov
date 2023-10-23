@@ -404,6 +404,13 @@ padding: 20px; /* Some placeholder styling */
     /* padding inside the box */
     margin-bottom: 10px;
     /* space between groups */
+    .group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
   }
 
   #group4,
