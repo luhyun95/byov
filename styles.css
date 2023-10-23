@@ -26,7 +26,6 @@ body {
 
   h2,
 .group h2 {
-text-align: center;
 font-size: 26px;
 margin: 10px; /* remove top margin */
 padding: 5px; /* add some padding if necessary */
@@ -40,6 +39,7 @@ padding: 5px; /* add some padding if necessary */
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    text-align: center;
 }
 
 h3 {
@@ -54,7 +54,6 @@ p {
     font-size: 14px;
     font-weight: 300; /* Regular */
     line-height: 21px;
-    text-align: center;
 }
 
 a {
@@ -283,8 +282,7 @@ margin: 0 auto; /* Centers the container */
   /* Style the label as a button */
   .custom-checkbox {
     font-size: 16;
-    padding: 15px 15px;
-    background-color: #EEE5D3;
+    background-color: #D7BF9D;
     /* button color */
     border-radius: 20px;
     cursor: pointer;
@@ -301,7 +299,7 @@ margin: 0 auto; /* Centers the container */
   table {
     width: 100%;
     border-collapse: separate; /* This allows border-spacing to work */
-border-spacing: 0 5px; /* 0 horizontal spacing, 5px vertical spacing */
+    border-spacing: 0 5px; /* 0 horizontal spacing, 5px vertical spacing */
     border-collapse: collapse;
     margin-top: 20px;
     border-radius: 50px;
@@ -317,7 +315,6 @@ text-align: center; /* Center the text */
     background-color: #AF9980;
     /* table header and footer row background color */
     color: #EEE5D3;
-    border: 1px solid #AF9980;
     /* light gray */
     padding: 8px;
     border-radius: 50px;
@@ -337,7 +334,6 @@ background-color: #7A6E51;
 
   th,
 td {
-  border: 1px solid #AF9980;
   padding: 0.5rem;
   text-align: left;
 }
