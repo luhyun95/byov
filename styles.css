@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +10,62 @@
 
 /* Set background color and font for the whole page */
 body {
-  font-family: 'Noto Serif', serif;
-  background-color: #f1efe9;
+  font-family: 'Lato', sans-serif;
+  background-color: #E6D6BE;
   color: #282828;
   line-height: 1.6;
 }
 
+
+  h1 {
+    margin-top: 60px;
+    padding-top: 20px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h2,
+.group h2 {
+text-align: center;
+font-size: 26px;
+margin: 10px; /* remove top margin */
+padding: 5px; /* add some padding if necessary */
+}
+
+  h3,
+  h4,
+  h5,
+  h6,
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 13px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300; /* Regular */
+    line-height: 21px;
+    text-align: center;
+}
+
+a {
+    color: #282828;
+    text-decoration: none;
+}
+
+
 /* Style the navigation */
 nav {
-  background-color: #f1efe9;
+  background-color: #E6D6BE;
   padding: 1rem;
   text-align: center;
 }
@@ -36,26 +87,18 @@ nav a {
 }
 
 nav a.cta {
-  background-color: #353535;
+  background-color: #7A6E51;
   border-radius: 0.25rem;
-  color: #f9f7f5
+  color: #EEE5D3;
 }
 
 /* Style the blog post */
 .blog-post {
-  background-color: #f1efe9;
-  border: 1px solid #ddd;
+  background-color: #E6D6BE;
+  border: 1px solid #AF9980;
   border-radius: 0.5rem;
   margin: 1rem 0;
   padding: 1rem;
-}
-
-h2 {
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1rem;
 }
 
 
@@ -104,7 +147,7 @@ object-fit: cover; /* Ensures the images cover the full space */
 flex-basis: calc(50% - 10px); /* 2 photos per row, 10px gap */
 padding-bottom: 30%; /* 3:2 aspect ratio */
 transition: width 0.5s; /* Transition for smooth width change */
-background-color: #ccc; /* Background color for placeholder */
+background-color: #D7BF9D; /* Background color for placeholder */
 margin: 10px; /* Some space around the images */
 position: relative; /* To enable absolute positioning for the img tag */
 }
@@ -143,9 +186,9 @@ padding: 20px;
     padding: 5px;
     margin-bottom: 10px;
     font-size: 16px;
-    background-color: #F5F5F6;
+    background-color: #D7BF9D;
     /* input field background color */
-    border: 1px solid #F5F5F6;
+    border: 1px solid #AF9980;
     /* light gray */
     border-radius: 50px;
     text-align: center;
@@ -158,9 +201,9 @@ padding: 20px;
     /* Larger padding increases the button size */
     font-size: 16px;
     /* You can adjust this as needed */
-    background-color: #F27523;
+    background-color: #7A6E51;
     /* button background color */
-    color: #fff;
+    color: #EEE5D3;
     /* white font color */
     border: none;
     /* remove border */
@@ -171,26 +214,22 @@ padding: 20px;
   input[type="button"]:hover,
   input[type="submit"]:hover,
   button:hover {
-    background-color: #5B7055;
+    background-color: #AF9980;
     /* changed hover color */
   }
 
   input:focus,
   select:focus {
-    outline-color: #F27523;
+    outline-color: #AF9980;
     /* outline color when focused */
   }
-
-  a {
-color: #00FF00; /* Bright green */
-}
 
 
 #calculateButton {
 width: 100%; /* Fill the entire width of the group */
 height: 60px; /* Set a suitable height */
-background-color: #F27523; /* Button color */
-color: #fff; /* Text color */
+background-color: #7A6E51; /* Button color */
+color: #EEE5D3; /* Text color */
 border: none;
 border-radius: 20px;
 font-size: 20px; /* Set a suitable font size */
@@ -200,7 +239,7 @@ transition: background-color 0.3s ease; /* transition for a smooth color change 
 }
 
 #calculateButton:hover {
-background-color: #5B7055;
+background-color: #AF9980;
 }
 
 
@@ -209,31 +248,6 @@ background-color: transparent; /* transparent background */
 border: none; /* no border */
 padding: 0; /* no padding */
 }
-
-
-  h1 {
-    font-family: 'Noto Serif', serif;
-    margin-top: 60px;
-    padding-top: 20px;
-    font-size: 40px;
-  }
-
-  h2,
-.group h2 {
-font-family: 'Noto Serif', serif;
-text-align: center;
-font-size: 26px;
-margin: 10px; /* remove top margin */
-padding: 5px; /* add some padding if necessary */
-}
-
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    text-align: center;
-  }
 
   .label-class {
 padding-bottom: 60px; /* Add padding under the label */
@@ -270,7 +284,7 @@ margin: 0 auto; /* Centers the container */
   .custom-checkbox {
     font-size: 16;
     padding: 15px 15px;
-    background-color: #F5F5F6;
+    background-color: #EEE5D3;
     /* button color */
     border-radius: 20px;
     cursor: pointer;
@@ -281,7 +295,7 @@ margin: 0 auto; /* Centers the container */
 
   /* Change the button color when the checkbox is checked */
   input[type="checkbox"]:checked+.custom-checkbox {
-    background-color: #F27523;
+    background-color: #D7BF9D;
   }
 
   table {
@@ -300,17 +314,17 @@ text-align: center; /* Center the text */
 
   th,
   tfoot td {
-    background-color: #f1efe9;
+    background-color: #AF9980;
     /* table header and footer row background color */
-    color: #fff;
-    border: 1px solid #F5F5F6;
+    color: #EEE5D3;
+    border: 1px solid #AF9980;
     /* light gray */
     padding: 8px;
     border-radius: 50px;
   }
 
   .highlighted-row {
-background-color: #6A7369;
+background-color: #7A6E51;
 }
 
   td {
@@ -323,22 +337,22 @@ background-color: #6A7369;
 
   th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid #AF9980;
   padding: 0.5rem;
   text-align: left;
 }
 
 th {
-  background-color: #F27523;
+  background-color: #D7BF9D;
   color: white;
 }
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #D7BF9D;
   }
 
   tr:hover {
-    background-color: #ddd;
+    background-color: #D7BF9D;
   }
 
   .checkbox-row label {
@@ -394,7 +408,7 @@ padding: 20px; /* Some placeholder styling */
 
   .group {
     /* white background */
-    border: 1px solid #DDDDDD;
+    border: 1px solid #AF9980;
     /* border color */
     border-radius: 20px;
     /* border radius */
@@ -457,7 +471,6 @@ position: absolute;
 top: 43%;
 width: 5px;
 height: 5px;
-background-color: #5B7055;
 border-radius: 50%;
 color: #5B7055;
 font-size: 12px;
