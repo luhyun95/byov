@@ -87,7 +87,7 @@ nav a {
 
 nav a.cta {
   background-color: #7A6E51;
-  border-radius: 0.25rem;
+  border-radius: 50px;
   color: #EEE5D3;
 }
 
@@ -177,7 +177,7 @@ padding: 20px;
     /* input field background color */
     border: 1px solid #AF9980;
     /* light gray */
-    border-radius: 0.25rem;
+    border-radius: 50px;
     text-align: center;
   }
 
@@ -193,7 +193,7 @@ padding: 20px;
     /* button background color */
     color: #EEE5D3;
     /* white font color */
-    border-radius: 0.25rem;
+    border-radius: 50px;
     /* remove border */
   }
 
@@ -217,7 +217,7 @@ padding: 5px;
 background-color: #7A6E51; /* Button color */
 color: #EEE5D3; /* Text color */
 border: none;
-border-radius: 0.25rem;
+border-radius: 50px;
 font-size: 20px; /* Set a suitable font size */
 cursor: pointer;
 margin-bottom: 60px;
@@ -277,7 +277,7 @@ margin: 0 auto; /* Centers the container */
     /* input field background color */
     border: 1px solid #AF9980;
     /* light gray */
-    border-radius: 0.25rem;
+    border-radius: 50px;
     text-align: center;
     transition: background-color 0.3s ease;
     /* transition for a smooth color change */
@@ -296,7 +296,7 @@ margin: 0 auto; /* Centers the container */
     border-spacing: 0 5px; /* 0 horizontal spacing, 5px vertical spacing */
     border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 0.25rem;
+    border-radius: 50px;
     text-align: center; /* Center the text */
   }
 
@@ -398,7 +398,7 @@ padding: 20px; /* Some placeholder styling */
     /* white background */
     border: 1px solid #AF9980;
     /* border color */
-    border-radius: 0.25rem;
+    border-radius: 50px;
     /* border radius */
     padding: 20px;
     /* padding inside the box */
