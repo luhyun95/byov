@@ -487,6 +487,8 @@ footer {
     color: #282828;
     padding: 20px 0;
     text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 footer a {
