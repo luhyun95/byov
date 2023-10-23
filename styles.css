@@ -184,7 +184,8 @@ padding: 20px;
   input[type="button"],
   input[type="submit"],
   button {
-    padding: 15px 32px;
+    padding: 5px;
+    margin-bottom: 10px;
     /* Larger padding increases the button size */
     font-size: 16px;
     /* You can adjust this as needed */
@@ -192,10 +193,8 @@ padding: 20px;
     /* button background color */
     color: #EEE5D3;
     /* white font color */
-    border: none;
-    /* remove border */
     border-radius: 0.25rem;
-    cursor: pointer;
+    /* remove border */
   }
 
   input[type="button"]:hover,
@@ -214,7 +213,7 @@ padding: 20px;
 
 #calculateButton {
 width: 100%; /* Fill the entire width of the group */
-height: 60px; /* Set a suitable height */
+padding: 5px;
 background-color: #7A6E51; /* Button color */
 color: #EEE5D3; /* Text color */
 border: none;
@@ -233,7 +232,7 @@ background-color: #AF9980;
 #button {
 background-color: transparent; /* transparent background */
 border: none; /* no border */
-padding: 0; /* no padding */
+padding: 5px;
 }
 
   .label-class {
@@ -270,7 +269,8 @@ margin: 0 auto; /* Centers the container */
 
   /* Style the label as a button */
   .custom-checkbox {
-    padding: 5px;
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
     font-size: 16px;
     background-color: #D7BF9D;
@@ -310,7 +310,7 @@ text-align: center; /* Center the text */
     /* table header and footer row background color */
     color: #EEE5D3;
     /* light gray */
-    padding: 8px;
+    padding: 5px;
     border-radius: 0.25rem;
   }
 
@@ -326,13 +326,11 @@ background-color: #7A6E51;
     /* input field background color */
     border: 1px solid #AF9980;
     border-radius: 0.25rem;
-    padding: 8px;
     text-align: left;
   }
 
   th,
 td {
-  padding: 0.5rem;
   text-align: left;
 }
 
