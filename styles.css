@@ -393,13 +393,10 @@ padding: 20px; /* Some placeholder styling */
     /* padding inside the box */
     margin-bottom: 10px;
     /* space between groups */
-    .group {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
   }
 
   #group4,
@@ -487,13 +484,12 @@ width: 100%;
 
 /* Footer styles */
 footer {
-    background-color: #D7BF9D;
-    color: #EEE5D3;
+    color: #282828;
     padding: 20px 0;
     text-align: center;
 }
 
 footer a {
-    color: #7A6E51;
+    color: #282828;
     text-decoration: underline;
 }
