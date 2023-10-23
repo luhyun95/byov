@@ -161,18 +161,6 @@ text-align: center;
 padding: 20px;
 }
 
-  label[for="area"] {
-    font-size: 18px;
-    /* Adjust as needed */
-  }
-
-  input[id="area"] {
-    font-size: 18px;
-    /* Adjust as needed */
-    padding: 10px;
-    text-align: center;
-  }
-
   label {
     display: block;
     margin-bottom: 5px;
@@ -249,7 +237,8 @@ padding: 0; /* no padding */
 }
 
   .label-class {
-padding-bottom: 60px; /* Add padding under the label */
+padding-bottom: 60px;
+text-align: Center;/* Add padding under the label */
 }
 
   .label-small {
@@ -281,15 +270,20 @@ margin: 0 auto; /* Centers the container */
 
   /* Style the label as a button */
   .custom-checkbox {
-    font-size: 16;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
     background-color: #D7BF9D;
-    /* button color */
-    border-radius: 20px;
-    cursor: pointer;
-    display: inline-block;
+    /* input field background color */
+    border: 1px solid #AF9980;
+    /* light gray */
+    border-radius: 50px;
+    text-align: center;
     transition: background-color 0.3s ease;
     /* transition for a smooth color change */
   }
+
+
 
   /* Change the button color when the checkbox is checked */
   input[type="checkbox"]:checked+.custom-checkbox {
@@ -325,10 +319,15 @@ background-color: #7A6E51;
 }
 
   td {
-    border: 1px solid transparent;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #D7BF9D;
+    /* input field background color */
+    border: 1px solid #AF9980;
+    border-radius: 50px;
     padding: 8px;
     text-align: left;
-    color: #000;
     border-radius: 50px;
   }
 
@@ -339,13 +338,9 @@ td {
 }
 
 th {
-  background-color: #D7BF9D;
-  color: white;
+  background-color: #AF9980;
+  color: #EEE5D3;
 }
-
-  tr:nth-child(even) {
-    background-color: #D7BF9D;
-  }
 
   tr:hover {
     background-color: #D7BF9D;
@@ -455,7 +450,7 @@ width: 100%; /* Adjust this value to fit the timeline within the group */
 .timeline-line {
 width: 100%;
 height: 2px;
-background-color: #ccc;
+background-color: #282828;
 position: absolute;
 top: 50%;
 left: 0;
@@ -468,7 +463,7 @@ top: 43%;
 width: 5px;
 height: 5px;
 border-radius: 50%;
-color: #5B7055;
+color: #282828;
 font-size: 12px;
 transform: translateX(-50%);
 left: calc(var(--timeline-pos) - 5px);
