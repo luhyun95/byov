@@ -174,7 +174,7 @@ flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
   input[type="button"],
   input[type="submit"],
   button {
-    padding: 5px;
+    padding: 1rem;
     margin-bottom: 10px;
     /* Larger padding increases the button size */
     font-size: 16px;
@@ -203,7 +203,7 @@ flex-basis: calc(50% - 10px); /* Two elements per row with a 10px gap */
 
 #calculateButton {
 width: 100%; /* Fill the entire width of the group */
-padding: 10px;
+padding: 1rem;
 background-color: #7A6E51; /* Button color */
 color: #EEE5D3; /* Text color */
 border: none;
@@ -222,7 +222,7 @@ background-color: #AF9980;
 #button {
 background-color: transparent; /* transparent background */
 border: none; /* no border */
-padding: 5px;
+padding: 1rem;
 }
 
   .label-class {
