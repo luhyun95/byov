@@ -49,7 +49,17 @@
         <!-- Add your footer content here -->
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // Load the navigation
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-container').innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Error fetching navigation:', error);
+        });
+    </script>
 </body>
 
 </html>
