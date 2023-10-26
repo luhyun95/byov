@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -92,13 +90,44 @@ nav a.cta {
 }
 
 /* Style the blog post */
-.blog-post {
+/*.blog-post {
   background-color: #E6D6BE;
   border: 1px solid #AF9980;
   border-radius: 0.25rem;
   margin: 1rem 0;
   padding: 1rem;
 }
+*/
+
+#blog {
+    margin: 30px 0;
+}
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.blog-post {
+    border: 1px solid #af9980;
+    border-radius: 50px;
+    padding: 10px;
+    overflow: hidden;
+}
+.blog-cover-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #af9980;
+    margin-bottom: 10px;
+}
+.blog-title {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+.blog-description {
+    margin: 0;
+    font-size: 16px;
+}
+
 
 
 .table {
@@ -277,7 +306,7 @@ margin: 0 auto; /* Centers the container */
 
   /* Change the button color when the checkbox is checked */
   input[type="checkbox"]:checked+.custom-checkbox {
-    background-color: #D7BF9D;
+    background-color: #AF9980;
   }
 
   table {
