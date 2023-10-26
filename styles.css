@@ -102,12 +102,14 @@ nav a.cta {
 #blog {
     margin: 30px 0;
     text-align: center;
+    align-items: center;
 }
+
 .blog-container {
     display: flex;
-    width: calc(33.33% - 20px);
+    width: 800px;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     overflow: hidden;
     flex-direction: column;
     align-items: center;
@@ -117,11 +119,11 @@ nav a.cta {
     border: 1px solid #af9980;
     border-radius: 50px;
     padding: 10px;
-    margin-bottom: 30px;
     text-align: left;
     overflow: hidden;
     width: 100%;
     max-width: 300px;
+    object-fit: cover;
 }
 
 .blog-cover-image {
