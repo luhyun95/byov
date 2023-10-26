@@ -124,10 +124,12 @@ nav a.cta {
 
 .blog-cover-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-bottom: 1px solid #af9980;
     margin-bottom: 10px;
 }
+
 .blog-title {
     margin: 0 0 10px;
     font-size: 24px;
