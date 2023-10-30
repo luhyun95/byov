@@ -107,6 +107,7 @@ nav a.cta {
 
 .blog-container {
     display: flex;
+    justify-content: center; 
     max-width: 1200px;  /* Adjust based on your website's design */
     margin: 0 auto;
     padding: 20px;
