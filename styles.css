@@ -190,6 +190,7 @@ nav a.cta {
     height: 100vh;
     position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
 .left, .right {
