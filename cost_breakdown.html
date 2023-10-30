@@ -18,7 +18,7 @@
     <div class="article-container">
 
         <!-- Page 1 -->
-        <div class="page">
+        <div class="page active">
             <div class="left">
                 <h1>The Cost Breakdown of Villa Construction in Bali</h1>
                 <p>Building your own villa in Bali is a dream come true for many. However, understanding the costs involved is crucial for turning that dream into a reality. In this article, we'll break down the general costs of villa construction in Bali, giving you a clear picture of what to expect.</p>
@@ -86,6 +86,26 @@
         <button id="prev">Previous</button>
         <button id="next">Next</button>
     </div>
-    <script src="javascript.js"></script>
+    <script src="javascript.js">
+    const pages = document.querySelectorAll('.page');
+let currentPage = 0;
+
+document.getElementById('prev').addEventListener('click', function() {
+    if (currentPage > 0) {
+        pages[currentPage].classList.remove('active');
+        currentPage--;
+        pages[currentPage].classList.add('active');
+    }
+});
+
+document.getElementById('next').addEventListener('click', function() {
+    if (currentPage < pages.length - 1) {
+        pages[currentPage].classList.remove('active');
+        currentPage++;
+        pages[currentPage].classList.add('active');
+    }
+});
+
+    </script>
 </body>
 </html>
