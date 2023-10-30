@@ -88,24 +88,23 @@
     </div>
     <script src="javascript.js">
     const pages = document.querySelectorAll('.page');
-let currentPage = 0;
+    let currentPage = 0;
 
-document.getElementById('prev').addEventListener('click', function() {
-    if (currentPage > 0) {
-        pages[currentPage].classList.remove('active');
-        currentPage--;
-        pages[currentPage].classList.add('active');
-    }
-});
+    document.getElementById('prev').addEventListener('click', function() {
+        if (currentPage > 0) {
+            pages[currentPage].classList.remove('active');
+            currentPage--;
+            pages[currentPage].classList.add('active');
+        }
+    });
 
-document.getElementById('next').addEventListener('click', function() {
-    if (currentPage < pages.length - 1) {
-        pages[currentPage].classList.remove('active');
-        currentPage++;
-        pages[currentPage].classList.add('active');
-    }
-});
-
+    document.getElementById('next').addEventListener('click', function() {
+        if (currentPage < pages.length - 1) {
+            pages[currentPage].classList.remove('active');
+            currentPage++;
+            pages[currentPage].classList.add('active');
+        }
+    });
     </script>
 </body>
 </html>
