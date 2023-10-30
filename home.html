@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="carousel">
+    <img src="bali.jpg" class="carousel-image active">
+    <img src="waves.jpg" class="carousel-image">
+    <img src="water.jpg" class="carousel-image">
+    <!-- Add more images as needed -->
+</div>
+
+<script src="script.js">
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll('.carousel-image');
+
+  function changeImage() {
+      images[currentImageIndex].classList.remove('active');
+
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      images[currentImageIndex].classList.add('active');
+  }
+
+  setInterval(changeImage, 3000);  // Changes every 3 seconds
+</script>
+</body>
+</html>
