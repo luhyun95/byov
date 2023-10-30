@@ -20,44 +20,44 @@
 
         <!-- Page 1 -->
         <div class="page active">
-            <div class="left">
+            <div class="left" id="leftSection">
                 <h1>The Cost Breakdown of Villa Construction in Bali</h1>
                 <p>Building your own villa in Bali is a dream come true for many. However, understanding the costs involved is crucial for turning that dream into a reality. In this article, we'll break down the general costs of villa construction in Bali, giving you a clear picture of what to expect.</p>
             </div>
-            <div class="right">
+            <div class="right" >
                 <img src="bali.jpg" alt="Villa Construction">
             </div>
         </div>
 
         <!-- Page 2 -->
         <div class="page">
-            <div class="left">
+            <div class="left" id="leftSection">
                 <h2>1. Construction Costs</h2>
                 <p>The largest portion of your villa budget will likely go into construction. On average, villa construction in Bali costs approximately 5 million to 10 million Indonesian Rupiah per square meter. Factors such as the choice of vendors and the quality of materials can influence this range. Don't forget to budget separately for a swimming pool if you desire one.</p>
             </div>
-            <div class="right">
+            <div class="right" id="rightSection">
                 <img src="water.jpg" alt="Architectural Design">
             </div>
         </div>
 
         <!-- Page 3 -->
         <div class="page">
-            <div class="left">
+            <div class="left" id="leftSection">
                 <h2>2. Architect and Interior Design</h2>
                 <p>While architectural and interior design services are optional, they can greatly enhance the aesthetics and functionality of your villa. Architect and interior design costs typically range from 350,000 to 1,000,000 Indonesian Rupiah per square meter, depending on the designer's expertise and reputation.</p>
             </div>
-            <div class="right">
+            <div class="right" id="rightSection">
                 <img src="sea.jpg" alt="Interior Design">
             </div>
         </div>
 
         <!-- Page 4 -->
         <div class="page">
-            <div class="left">
+            <div class="left" id="leftSection">
                 <h2>3. Furnishing</h2>
                 <p>Furnishing your villa is the final touch that brings it to life. As a general rule of thumb, budget around 11% of your construction cost for furnishing. This includes furniture, decor, and any other items you need to make your villa comfortable and inviting.</p>
             </div>
-            <div class="right">
+            <div class="right" id="rightSection">
                 <!-- This image is a placeholder, change it as needed -->
                 <img src="waves.jpg" alt="Villa Furnishing">
             </div>
@@ -65,21 +65,24 @@
 
         <!-- Page 5 -->
         <div class="page">
-            <div class="left">
+            <div class="left" id="leftSection">
                 <h2>4. Additional Considerations</h2>
                 <p>Keep in mind that there may be additional costs such as permits, taxes, and utility connections. It's essential to factor in these expenses to avoid surprises along the way.</p>
+            </div>
+            <div class="right" id="rightSection">
+                <img src="image5.jpg" alt="Cost Calculator">
             </div>
             <!-- No image on the right side for this page -->
         </div>
 
         <!-- Page 6 -->
         <div class="page">
-            <div class="left">
+            <div class="left" id="leftSection">
                 <h2>Want a More Specific Cost Breakdown?</h2>
                 <p>If you want a more detailed and specific breakdown of costs for your villa project in Bali, try using our <a href="https://byovbali.com" target="_blank">cost calculator</a>. It's verified by architect studios in Bali and can help you plan your budget with precision.</p>
             </div>
             <!-- Placeholder image for the right side -->
-            <div class="right">
+            <div class="right" id="rightSection">
                 <img src="image5.jpg" alt="Cost Calculator">
             </div>
         </div>
@@ -107,6 +110,32 @@
             pages[currentPage].classList.add('active');
         }
     });
+
+    let currentImageIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+const pages = document.querySelectorAll('.page');
+const leftSection = document.getElementById('leftSection');
+const rightSection = document.getElementById('rightSection');
+
+function changeImage() {
+    images[currentImageIndex].classList.remove('active');
+
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+
+    images[currentImageIndex].classList.add('active');
+}
+
+function changePage() {
+    pages[currentImageIndex].classList.remove('active');
+    currentImageIndex = (currentImageIndex + 1) % pages.length;
+    pages[currentImageIndex].classList.add('active');
+}
+
+setInterval(changeImage, 3000);  // Changes every 3 seconds
+
+leftSection.addEventListener('click', changePage);
+rightSection.addEventListener('click', changePage);
+
     </script>
 </body>
 </html>

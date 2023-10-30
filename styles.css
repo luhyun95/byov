@@ -209,6 +209,10 @@ nav a.cta {
 
 .right {
     background-color: #7A6E51;
+    align-items: center;  /* Vertically centers the image */
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .article-content {
@@ -217,9 +221,10 @@ nav a.cta {
 }
 
 .image-content img {
-    max-width: 80%;
-    max-height: 80vh;
     display: block;
+    object-fit: cover; /* Ensures the image covers the full area */
+    max-width: 80%; /* Ensures image doesn't grow beyond its container */
+    max-height: 80%;
 }
 
 .page {
