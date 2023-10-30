@@ -107,7 +107,7 @@ nav a.cta {
 
 .blog-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     max-width: 1200px;  /* Adjust based on your website's design */
     margin: 0 auto;
     padding: 20px;
@@ -140,6 +140,13 @@ nav a.cta {
 .read-more:hover {
     background-color: #000;
     color: #fff;
+}
+
+.separator {
+    width: 50px; /* You can adjust the width as needed */
+    height: 1px; /* Adjust the height/thickness of the line */
+    background-color: #7A6E51; /* Color of the line */
+    margin: 20px auto; /* Centers the line and adds space above and below */
 }
 
 .blog-title {
