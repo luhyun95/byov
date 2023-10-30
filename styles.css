@@ -164,55 +164,59 @@ nav a.cta {
 
 .article-container {
     display: flex;
-    height: 100vh; /* Takes the full viewport height */
+    height: 100vh;
     position: relative;
     width: 100%;
 }
 
 .left, .right {
-    flex: 1; /* Each section takes up half the width of the container */
+    flex: 1;
     display: flex;
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
-    width: 50%;  /* Divides the page into two equal sections */
-    padding: 2%; /* Optional, provides some spacing around content */
-
-    padding: 2em; /* Adds some padding around the content */
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 2em;
 }
 
-
 .left {
-  background-color: #EEE503;
-  text-align: center;
+    background-color: #EEE503;
+    text-align: center;
 }
 
 .right {
-  background-color: #7A6E51;
-  display: flex;
-  align-items: center;  /* Vertically centers the image */
-  justify-content: center;
+    background-color: #7A6E51;
 }
 
 .article-content {
-    width: 60%; /* Adjusts the width of the article content */
-    text-align: justify; /* Justifies the text for a magazine-like feel */
+    width: 60%;
+    text-align: justify;
 }
 
 .image-content img {
-    max-width: 80%; /* Adjusts the image's width */
-    max-height: 80vh; /* Adjusts the image's height */
+    max-width: 80%;
+    max-height: 80vh;
     display: block;
 }
 
 .page {
-    display: none; /* Hide all pages */
+    display: none;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .page.active {
-    display: flex
+    display: flex;
+}
 
+#prev, #next {
+    font-size: 16px; /* Adjust as needed */
+    padding: 8px 12px; /* Adjust as needed */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
 
 
 .table {
