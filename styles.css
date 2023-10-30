@@ -155,19 +155,6 @@ nav a.cta {
 }
 
 
-@media only screen and (max-width: 960px) {
-    .blog-container {
-        width: calc(50% - 20px);
-    }
-}
-
-@media only screen and (max-width: 640px) {
-    .blog-container {
-        width: 100%;
-    }
-}
-
-
 .table {
 padding-bottom: 100px;  /* Adjust the value as needed */
 }
