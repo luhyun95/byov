@@ -132,8 +132,8 @@ nav a.cta {
     margin-top: 20px;
     padding: 10px 20px;
     text-decoration: none;
-    color: #000;
-    border: 2px solid #000;
+    color: #282828;
+    border: 2px solid #282828;
     transition: background-color 0.3s;
 }
 
@@ -176,10 +176,11 @@ nav a.cta {
     justify-content: center;
     width: 50%;
     padding: 2em;
+    position: relative;
 }
 
 .left {
-    background-color: #EEE503;
+    background-color: #EEE5D3;
     text-align: center;
 }
 
@@ -209,15 +210,25 @@ nav a.cta {
 }
 
 #prev, #next {
-    font-size: 16px; /* Adjust as needed */
-    padding: 8px 12px; /* Adjust as needed */
-    background-color: #333;
-    color: #fff;
+    font-size: 20px; /* Adjust as needed */
+    padding: 10px;
+    background-color: transparent; /* Set to transparent */
+    color: #282828;
     border: none;
-    margin: 10px;
+    position: absolute; /* Position them absolutely */
+    bottom: 10px; /* Push from the bottom */
+    transform: translateY(50%); /* Adjust vertically */
     cursor: pointer;
+    z-index: 10; /* Ensure they are above other content */
 }
 
+#prev {
+    left: 10px; /* Position at left */
+}
+
+#next {
+    right: 10px; /* Position at right */
+}
 
 .table {
 padding-bottom: 100px;  /* Adjust the value as needed */
