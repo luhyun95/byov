@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
 
 
 /* styleguide
@@ -54,6 +55,7 @@ h2 {
 
 h3 {
     font-size: 18px;
+    font-family: 'Luxurious Script', cursive;
 }
 
 h5 {
