@@ -247,7 +247,16 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="script.js">
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-container').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error fetching navigation:', error);
+    });
+</script>
 
 </body>
 <!-- Footer HTML -->
