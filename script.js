@@ -1,3 +1,16 @@
+//home Carousel
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+
+function changeImage() {
+    images[currentImageIndex].classList.remove('active');
+
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+
+    images[currentImageIndex].classList.add('active');
+}
+setInterval(changeImage, 3000);  // Changes every 3 seconds
+
 //Cost Calculator
 // Load the navigation
 document.getElementById('nav-container').innerHTML = '<nav><ul><li><a href="index.html">Home</a></li><li><a href="guidebook.html">Guidebook</a></li><li><a href="land-investment.html">Land Investment</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="roi-calculator.html">ROI Calculator</a></li><li><a href="mailto:nomadinseoul@gmail.com" class="cta">Inquiry</a></li></ul></nav>';
