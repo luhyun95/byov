@@ -357,47 +357,42 @@ document.getElementById('timeline').style.display = 'block';
 
 
 //Blog page go next
+    const pages = document.querySelectorAll('.page');
+    let currentPage = 0;
 
-const pages = document.querySelectorAll('.page');
-let currentPage = 0;
+    document.getElementById('prev').addEventListener('click', function() {
+        if (currentPage > 0) {
+            pages[currentPage].classList.remove('active');
+            currentPage--;
+            pages[currentPage].classList.add('active');
+        }
+    });
 
-document.getElementById('prev').addEventListener('click', function() {
-    if (currentPage > 0) {
+    document.getElementById('next').addEventListener('click', function() {
+        if (currentPage < pages.length - 1) {
+            pages[currentPage].classList.remove('active');
+            currentPage++;
+            pages[currentPage].classList.add('active');
+        }
+    });
+
+    const images = document.querySelectorAll('.carousel-image');
+    const leftSection = document.getElementById('leftSection');
+    const rightSection = document.getElementById('rightSection');
+
+    function changeImage() {
+        images[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.add('active');
+    }
+
+    function changePage() {
         pages[currentPage].classList.remove('active');
-        currentPage--;
+        currentPage = (currentPage + 1) % pages.length;
         pages[currentPage].classList.add('active');
     }
-});
 
-document.getElementById('next').addEventListener('click', function() {
-    if (currentPage < pages.length - 1) {
-        pages[currentPage].classList.remove('active');
-        currentPage++;
-        pages[currentPage].classList.add('active');
-    }
-});
+    setInterval(changeImage, 3000);  // Changes every 3 seconds
 
-let currentImageIndex = 0;
-const images = document.querySelectorAll('.carousel-image');
-const pages = document.querySelectorAll('.page');
-const leftSection = document.getElementById('leftSection');
-const rightSection = document.getElementById('rightSection');
-
-function changeImage() {
-images[currentImageIndex].classList.remove('active');
-
-currentImageIndex = (currentImageIndex + 1) % images.length;
-
-images[currentImageIndex].classList.add('active');
-}
-
-function changePage() {
-pages[currentImageIndex].classList.remove('active');
-currentImageIndex = (currentImageIndex + 1) % pages.length;
-pages[currentImageIndex].classList.add('active');
-}
-
-setInterval(changeImage, 3000);  // Changes every 3 seconds
-
-leftSection.addEventListener('click', changePage);
-rightSection.addEventListener('click', changePage);
+    leftSection.addEventListener('click', changePage);
+    rightSection.addEventListener('click', changePage);
