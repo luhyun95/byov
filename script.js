@@ -358,25 +358,46 @@ document.getElementById('timeline').style.display = 'block';
 
 //Blog page go next
 
-document.addEventListener("DOMContentLoaded", function() {
-    let pages = document.querySelectorAll('.page');
-    let currentIndex = 0;
+const pages = document.querySelectorAll('.page');
+let currentPage = 0;
 
-    pages[currentIndex].classList.add('active'); // Show the first page initially
-
-    document.getElementById('next').addEventListener('click', function() {
-        if (currentIndex < pages.length - 1) {
-            pages[currentIndex].classList.remove('active');
-            currentIndex++;
-            pages[currentIndex].classList.add('active');
-        }
-    });
-
-    document.getElementById('prev').addEventListener('click', function() {
-        if (currentIndex > 0) {
-            pages[currentIndex].classList.remove('active');
-            currentIndex--;
-            pages[currentIndex].classList.add('active');
-        }
-    });
+document.getElementById('prev').addEventListener('click', function() {
+    if (currentPage > 0) {
+        pages[currentPage].classList.remove('active');
+        currentPage--;
+        pages[currentPage].classList.add('active');
+    }
 });
+
+document.getElementById('next').addEventListener('click', function() {
+    if (currentPage < pages.length - 1) {
+        pages[currentPage].classList.remove('active');
+        currentPage++;
+        pages[currentPage].classList.add('active');
+    }
+});
+
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+const pages = document.querySelectorAll('.page');
+const leftSection = document.getElementById('leftSection');
+const rightSection = document.getElementById('rightSection');
+
+function changeImage() {
+images[currentImageIndex].classList.remove('active');
+
+currentImageIndex = (currentImageIndex + 1) % images.length;
+
+images[currentImageIndex].classList.add('active');
+}
+
+function changePage() {
+pages[currentImageIndex].classList.remove('active');
+currentImageIndex = (currentImageIndex + 1) % pages.length;
+pages[currentImageIndex].classList.add('active');
+}
+
+setInterval(changeImage, 3000);  // Changes every 3 seconds
+
+leftSection.addEventListener('click', changePage);
+rightSection.addEventListener('click', changePage);
