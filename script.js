@@ -13,7 +13,8 @@ setInterval(changeImage, 3000);  // Changes every 3 seconds
 
 //Cost Calculator
 // Load the navigation
-document.getElementById('nav-container').innerHTML = '<nav><ul>li><a href="guidebook.html">Guidebook</a></li><li><a href="land-investment.html">Land Investment</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="roi-calculator.html">ROI Calculator</a></li><li><a href="mailto:nomadinseoul@gmail.com" class="cta">Inquiry</a></li></ul></nav>';
+document.getElementById('nav-container').innerHTML = '<nav><ul><li><a href="guidebook.html">Guidebook</a></li><li><a href="land-investment.html">Land Investment</a></li><li><a href="cost-calculator.html">Cost Calculator</a></li><li><a href="roi-calculator.html">ROI Calculator</a></li><li><a href="mailto:nomadinseoul@gmail.com" class="cta">Inquiry</a></li></ul></nav>';
+
 
 function toggleSwimmingPoolGroup() {
 const group2SwimmingPool = document.getElementById('group2SwimmingPool');
